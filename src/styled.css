@@ -1,5 +1,13 @@
 @import "tailwindcss";
- 
+/* ALWAYS USE THE OKLCH FORMAT FOR GRADIENTS */
+@theme{
+  --color-dark-beige: oklch(18.993% 0.11429 280.8 / 0.333);
+  --font-foine: 'Georgia', 'Times New Roman';
+}
+@utility grid-cols-autofit{
+  grid-template-columns: repeat(auto-fit,minmax(13.75rem,1fr));
+}
+
 @keyframes marquee{
   0%{transform: translate3d(100%,0, 0); }
   100%{transform: translate3d(-100%,0 ,0); }
