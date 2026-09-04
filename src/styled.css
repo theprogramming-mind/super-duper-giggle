@@ -8,6 +8,26 @@
   grid-template-columns: repeat(auto-fit,minmax(13.75rem,1fr));
 }
 
+@layer base{
+  h1,h2,h3,h4,h5,h6{
+   font-weight: 700; 
+  }
+}
+@layer components{
+    .bitton{
+      @apply 
+           relative inline-block overflow-hidden
+          py-3 px-8
+          rounded-full
+          text-white uppercase font-bold tracking-widest
+          transition-all duration-300 transform hover:scale-110
+          bg-[linear-gradient(270deg,cyan,fuchsia,orange,pink,purple,cyan)]
+          shadow-[0_0_20px_rgba(217,70,239,0.5)]
+          hover:shadow-[0_0_35px_rgba(217,70,239,0.9)]
+  }
+
+}
+
 @keyframes marquee{
   0%{transform: translate3d(100%,0, 0); }
   100%{transform: translate3d(-100%,0 ,0); }
