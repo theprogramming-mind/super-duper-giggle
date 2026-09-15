@@ -1,0 +1,217 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel=stylesheet href="src/looks.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Unica+One&display=swap" rel="stylesheet">
+        <!-- Dope link to get icons(like the one used for the password -->
+        <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+        rel="stylesheet"
+        />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Front Page</title>
+        </head>
+
+    <body class="bg-[#0b0d14]  ">
+        <!-- Creating the SVG ring circles for the background -->
+         <div class="absolute z-0 pointer-events-none inset-0 w-full h-full">
+            <svg 
+                viewBox="0 0 1000 1000" 
+                width="100%" 
+                height="100%" 
+                preserveAspectRatio="xMidYMid slice"
+                style="display: block;"
+                >
+              <g clahidden ss="flex sm:block">
+                    <!-- Outer Ring -->
+                    <circle 
+                        cx="500" 
+                        cy="500" 
+                        r="420" 
+                        fill="none" 
+                        stroke="rgba(255, 255, 255, 0.15)" 
+                        stroke-width="1" 
+                    />
+
+                    <!-- Middle Accent Ring -->
+                    <circle 
+                        cx="500" 
+                        cy="500" 
+                        r="280" 
+                        fill="none" 
+                        stroke="rgba(147, 51, 234, 0.19)" 
+                        stroke-width="1" 
+                    />
+
+                    <!-- Inner Ring framing the center -->
+                    <circle 
+                        cx="500" 
+                        cy="500" 
+                        r="160" 
+                        fill="none" 
+                        stroke="rgba(59, 130, 246, 0.15)" 
+                        stroke-width="1" 
+                    />
+                    <!-- Main Axis Lines (Center Intersects at 500, 500) -->
+                    <!-- Horizontal Axis Line -->
+                    <line 
+                    x1="0" y1="500" 
+                    x2="1000" y2="500" 
+                    stroke="rgba(255, 255, 255, 0.1)" 
+                    stroke-width="1" 
+                    />
+
+                    <!-- Vertical Axis Line -->
+                    <line 
+                    x1="500" y1="0" 
+                    x2="500" y2="1000" 
+                    stroke="rgba(255, 255, 255, 0.15)" 
+                    stroke-width="1" 
+                    />
+
+                    <!-- Top Plus Node (Sitting on top vertical axis line) -->
+                    <path 
+                    d="M 495 100 H 505 M 500 95 V 105" 
+                    stroke="rgba(59, 130, 246, 0.5)" 
+                    stroke-width="1.5" 
+                    />
+
+                    <!-- Intersection Nodes (Glowing dots on the outer horizontal ring) -->
+                    <circle cx="80" cy="500" r="3" fill="#60a5fa" opacity="0.7" class="radar-dot" />
+                    <circle cx="920" cy="500" r="3" fill="#60a5fa" opacity="0.7" class="radar-dot" style="animation-delay: 1.2s" />
+                </g>
+
+            </svg>
+            <div class=" rounded-full bg-radial-[at_50%_75%] from-sky-200 via-blue-400 to-indigo-900 to-90 -z-1 absolute w-[500px] h-[500px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-50 blur-3xl background-movement"></div>
+         </div>
+        <div class=" relative z-10 min-h-screen w-full text-xs text-blue-300 tracking-[0.2em] ">
+
+            <div class="absolute top-8 left-4 flex items-center gap-2 font-quantico">
+                <img src="/logo.png" class="w-8 h-auto object-contain" alt="logo">
+                <h3 class=" text-white">OPERATION</h3><h3 class="text-bitton hover-magic">BUILD</h3>
+            </div>
+
+            <!-- The edges -->
+            <div class="absolute top-8 right-12  items-center gap-4 hidden md:flex">
+                <div class="bg-indigo-900 h-[4px] w-8 " ></div>
+                <h3 class="font-quantico">90 DAY CONSISTENCY PROTOCOL</h3>
+            </div>
+            <div class="absolute bottom-8 right-12  items-center gap-4 hidden md:flex">
+                <div class="bg-blue-400 w-[2px] h-5 skew-x-[20deg]"></div>
+                <h3 class="font-quantico">SAME TEAM. BIGGER GOAL</h3>
+            </div>
+            <div class="absolute bottom-8 left-12  items-center gap-4 hidden md:flex text-left">
+                <div class="bg-indigo-900 w-[2px] h-5"></div>
+                <h3 class="font-quantico">CHALLENGE YOURSELF</h3>
+            </div>
+            <!-- The middle areas-->
+            <div class="absolute top-1/2 left-12  items-center gap-4 hidden lg:flex">
+                <div class="bg-blue-400 "></div>
+                <h3 class="font-quantico">BUILD BETTER<br>TOGETHER</h3>
+            </div>
+            <div class="absolute top-1/2 right-12  items-center gap-4 hidden lg:flex">
+                <div class="to-blue-400"></div>
+                <h3 class="font-quantico">DISCIPLINE = CHOOSING <br>(WANTS NOW VS. WANTS MOST)</h3>
+            </div>
+
+        
+       
+        <section class="min-h-screen w-full flex flex-col items-center justify-center text-white p-4">
+
+            <h1 class="font-unica justify-center text-4xl font-bold">OPERATION BUILD</h1>
+            <p>90 DAYS. ONE GOAL <br> ONE BUILD AT A TIME.</p>
+
+            <br><br>
+
+            <div class="bg-slate-900/50 border-slate-800 border backdrop-blur-md rounded-xl w-[90%] max-w-[380px] mx-auto">
+
+                <form action="/submit" method="POST" class="flex p-6 sm:p-8 flex-col gap-4 w-full">
+                    <label for="operative-label" class="tracking-widest text-xl font-quantico block text-left">Operative<br> </label>
+                    <div class="relative w-full operative-dropdown">
+                        <input type="checkbox" id="operative-toggle" class="peer hidden">
+                        
+                        <label
+                            for="operative-toggle"
+                            class="min-w-0 flex items-center justify-between focus:ring-2 focus:ring-indigo-400 w-full p-2 border border-slate-700 bg-mauve-700/50 rounded-md text-left text-white cursor-pointer peer-checked:[&_svg]:rotate-180"
+                        >
+                            <span id="operative-label">C.E.O</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400 shrink-0 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </label>
+
+                        <ul class="hidden peer-checked:block absolute left-0 right-0 mt-1 list-none max-h-56 overflow-y-auto rounded-md border border-slate-700 bg-slate-800 text-white shadow-lg z-20">
+                            <li class="operative-option px-3 py-2 cursor-pointer hover:bg-indigo-600" data-value="C.E.O" data-label="C.E.O">C.E.O</li>
+                            <li class="operative-option px-3 py-2 cursor-pointer hover:bg-indigo-600" data-value="Ayo" data-label="Ayowumi">Ayowumi</li>
+                            <li class="operative-option px-3 py-2 cursor-pointer hover:bg-indigo-600" data-value="Light" data-label="Light">Light</li>
+                            <li class="operative-option px-3 py-2 cursor-pointer hover:bg-indigo-600" data-value="Athena" data-label="Athena">Athena</li>
+                            <li class="operative-option px-3 py-2 cursor-pointer hover:bg-indigo-600" data-value="Victoria" data-label="Vicky">Vicky</li>
+                        </ul>
+
+                        <input type="hidden" name="user-name" value="C.E.O">
+                    </div>
+         
+                    <label for="password" class="tracking-widest text-xl font-quantico block text-left">PASSCODE </label>
+                    <div class="relative">
+                        <input type="password" id="password" placeholder="write password" class="ri-lock-line text-white 
+                        appearance-none p-2 w-full border-slate-700 bg-mauve-700/50 rounded-md focus:ring-2 focus:ring-indigo-400 transition-colors duration-500 outline-none" required>
+                        <!-- Custom Eye SVG -->
+                        <div class="absolute inset-y-0 right-4 flex items-center cursor-pointer text-gray-400 hover:text-gray-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                        </div>
+                            
+                    </div>
+                    
+                    <br>
+                        <div class="rounded-md w-full uppercase text-center bitton hover-magic cursor-pointer">
+                            <a href="#">START OPERATION</a>
+                        </div>
+                    
+                 </form>
+            </div>
+
+        </section>
+    
+
+
+        </div>
+
+        <style>
+        /* Pure CSS dropdown functionality */
+        .operative-option {
+            display: block;
+        }
+
+        .operative-option:active {
+            background-color: rgb(79, 70, 229);
+        }
+
+        /* Uncheck the dropdown when an option is clicked */
+        .operative-option:active ~ input[type="checkbox"],
+        .operative-option:checked ~ input[type="checkbox"] {
+            display: none;
+        }
+        </style>
+        
+        <script>
+        /* Minimal script to handle option selection and close dropdown */
+        document.querySelectorAll('.operative-option').forEach(option => {
+            option.addEventListener('click', function() {
+                const value = this.dataset.value;
+                const label = this.dataset.label;
+                document.getElementById('operative-label').textContent = label;
+                document.querySelector('input[name="user-name"]').value = value;
+                document.getElementById('operative-toggle').checked = false;
+            });
+        });
+        </script>
+    </body>
+
+</html>
