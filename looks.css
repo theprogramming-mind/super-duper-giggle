@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme{
+    --font-unica: "Unica One", sans-serif;
+    --font-quantico: "Quantico", sans-serif;
+    
+}
+
+@keyframes halo {
+    0% {background-position: 0% 30%;}
+    50% {background-position: 30% 70%;}
+    100% {background-position: 0% 30%;}
+}
+@keyframes radar-pulse {
+    0%,100%{
+        opacity: 0.3;transform: scale(1);
+    };
+    50%{
+       opacity: 1; transform: scale(1.15);
+   };
+}
+/* Rapid jitter & flicker keyframes */
+@keyframes hud-glitch {
+  0%, 88%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+    fill: #60a5fa; /* Cyan */
+  }
+  89% {
+    transform: translate(-3px, 1px) scale(1.4);
+    opacity: 1;
+    fill: #f43f5e; /* Red/Pink flash */
+  }
+  90% {
+    transform: translate(2px, -2px) scale(0.6);
+    opacity: 0.2;
+  }
+  91% {
+      transform: translate(-1px, 2px) scale(1.2);
+      opacity: 0.9;
+      fill: #60a5fa;
+    }
+    92% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes magic-button{
+0%{ background-position: 0% 50%; }
+33%{ background-position: 50% 100%; }
+66%{ background-position: 100% 0%; }
+100%{ background-position: 0% 50%; }
+}
+
+.background-movement{
+    background-size: 250% 250%;
+    animation: halo 6s ease-in-out infinite;
+    will-change: background-positon;
+}
+
+.radar-dot{
+    animation: radar-pulse 2s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.glitch-dot {
+  animation: hud-glitch 3s infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.hover-magic {
+background-size: 300% 300%;
+animation: magic-button 8s ease-in-out infinite;
+will-change: background-position;
+}
+
+
+
+/* Adding the button effect coloring  */
+@layer components{
+    .bitton{
+      @apply 
+           relative inline-block overflow-hidden
+          py-3 px-8
+          rounded-full
+          text-white uppercase font-bold tracking-widest
+          transition-all duration-300 transform hover:scale-110
+          bg-[linear-gradient(270deg,#06b6d4,#818cf8,#c084fc,#3b82f6,#06b6d4)]
+          shadow-[0_0_20px_rgba(217,70,239,0.5)]
+          hover:shadow-[0_0_35px_rgba(217,70,239,0.9)]
+  }
+
+}
+
+.text-bitton{
+ @apply
+          uppercase font-bold tracking-widest
+          transition-all duration-300 transform hover:scale-110
+          bg-[linear-gradient(270deg,#1d4ed8,#8b5cf6,#a855f7,#38bdf8,#1d4ed8)]
+          drop-shadow-[0_0_20px_rgba(217,70,239,0.5)]
+          bg-clip-text text-transparent   
+}
