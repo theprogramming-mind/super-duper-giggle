@@ -1,1 +1,0 @@
-// I know no JS yet, buh I have a feeling that CONST is used here and there tho
